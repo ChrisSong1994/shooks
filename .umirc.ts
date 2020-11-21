@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'hooks',
+  title: 'shooks',
   mode: 'doc',
   favicon: '/logo.png',
   logo: '/logo.png',

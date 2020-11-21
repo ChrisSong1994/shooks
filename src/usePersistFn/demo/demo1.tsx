@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { message } from 'antd';
-import { useMount } from 'hooks';
+import { useMount } from 'shooks';
 
 const MyComponent = () => {
   useMount(() => {

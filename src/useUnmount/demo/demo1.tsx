@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useUnmount } from 'hooks';
-import { message } from 'antd';
+import { useUnmount } from 'shooks';
+import { message, Button } from 'antd';
 
 const MyComponent = () => {
   useUnmount(() => {
@@ -15,9 +15,9 @@ export default () => {
 
   return (
     <>
-      <button type="button" onClick={() => setState(!state)}>
+      <Button type="primary" onClick={() => setState(!state)}>
         {state ? 'unmount' : 'mount'}
-      </button>
+      </Button>
       {state && <MyComponent />}
     </>
   );

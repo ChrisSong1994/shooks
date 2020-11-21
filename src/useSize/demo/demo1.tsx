@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSize } from 'hooks';
+import { useSize } from 'shooks';
 
 export default () => {
   const size = useSize();

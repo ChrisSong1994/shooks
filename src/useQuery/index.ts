@@ -1,6 +1,4 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import 'url-search-params-polyfill'; // ie 兼容问题
+import 'url-search-params-polyfill'; // ie 兼容
 
 type queryType =
   | string
@@ -9,15 +7,17 @@ type queryType =
   | Record<string, string>
   | undefined;
 
-type searchObjectType = { [key: string]: string };
+type searchValuesType = { [key: string]: string };
 
 const useQuery = (value?: queryType) => {
-  const searchParams = new URLSearchParams(value || useLocation().search);
-  const searchObject: searchObjectType = {};
-  for (let [key, value] of searchParams.values()) {
-    searchObject[key] = value;
+  const searchParams = new URLSearchParams(value || window.location.search);
+
+  const searchValues: searchValuesType = {};
+
+  for (let [key, value] of searchParams.entries()) {
+    searchValues[key] = value;
   }
-  return { searchParams, searchObject };
+  return { searchParams, searchValues };
 };
 
 export default useQuery;

@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
-import { message } from 'antd';
-import { useMount } from 'hooks';
+import { message, Button } from 'antd';
+import { useMount } from 'shooks';
 
 const MyComponent = () => {
   useMount(() => {
@@ -15,9 +15,9 @@ export default () => {
 
   return (
     <Fragment>
-      <button type="button" onClick={() => setState(!state)}>
+      <Button type="primary" onClick={() => setState(!state)}>
         {state ? 'unmount' : 'mount'}
-      </button>
+      </Button>
       {state && <MyComponent />}
     </Fragment>
   );
