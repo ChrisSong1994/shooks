@@ -9,6 +9,9 @@ export default defineConfig({
   resolve: {
     includes: ['src'],
   },
+  devServer: {
+    port: 7000,
+  },
   extraBabelPlugins: [
     [
       'babel-plugin-import',

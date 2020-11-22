@@ -3,6 +3,7 @@ title: useMount
 group:
   title: LifeCycle
   path: /life-cycle
+  order: 1
 ---
 
 # useMount

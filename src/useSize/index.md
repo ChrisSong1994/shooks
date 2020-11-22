@@ -3,9 +3,12 @@ title: useSize
 group:
   title: Dom
   path: /dom
+  order: 3
 ---
 
 # useSize
+
+一个用于监听 dom 节点尺寸变化的 Hook
 
 ## 代码演示
 

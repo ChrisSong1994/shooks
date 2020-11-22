@@ -3,6 +3,7 @@ title: useQuery
 group:
   title: State
   path: /state
+  order: 2
 ---
 
 # useQuery
