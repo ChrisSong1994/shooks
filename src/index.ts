@@ -4,6 +4,7 @@ export { default as useUnmount } from './useUnmount';
 
 // Dom
 export { default as useSize } from './useSize';
+export { default as useVirtualList } from './useVirtualList';
 
 // State
 export { default as useQuery } from './useQuery';
