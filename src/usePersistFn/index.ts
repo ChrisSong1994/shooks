@@ -12,6 +12,7 @@ const usePersistFn = <T extends noop>(fn: T): noop => {
     ref.current = fn;
   }, [fn]);
 
+  // 此做法的目的是为了不在函数内变量变化的时候重复去创建函数,ref对象不会改变
   return useCallback((...args) => ref.current(...args) as T, [ref]);
 };
 

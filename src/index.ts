@@ -1,6 +1,8 @@
 // LifeCycle
 export { default as useMount } from './useMount';
 export { default as useUnmount } from './useUnmount';
+export { default as useUpdate } from './useUpdate';
+export { default as useIsMounted } from './useIsMounted';
 
 // Dom
 export { default as useSize } from './useSize';
