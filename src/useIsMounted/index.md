@@ -3,7 +3,7 @@ title: useIsMounted
 group:
   title: LifeCycle
   path: /life-cycle
-  order: 4
+  order: 1
 ---
 
 # useIsMounted

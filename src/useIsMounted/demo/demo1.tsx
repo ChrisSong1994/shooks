@@ -1,23 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useIsMounted } from 'shooks';
-import { message } from 'antd';
+import { Button, message } from 'antd';
 
-export default () => {
+const SubComponment = () => {
   const isMounted = useIsMounted();
 
   if (isMounted) {
-    message.info('component has been loaded!');
+    debugger;
+    message.info('component is loaded!');
+  } else {
+    debugger;
+    message.info('component is unLoaded!');
   }
 
   const handleVideoLoad = () => {
-    message.info('video has been loaded');
+    message.info('img is loaded');
   };
+
   return (
     <div>
-      <video
+      <img
+        style={{ width: '100%' }}
         onLoad={handleVideoLoad}
-        src="https://dpv.videocc.net/4723ce7453/7/4723ce7453eb947d371837709f5af3c7_3.mp4?pid=1607183544622X1259566"
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607195243821&di=0849c8fe55320d8fea346573e3ff4f27&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201303%2F18%2F233101zl8ouwl8l8e8eu7e.jpg"
       />
     </div>
+  );
+};
+
+export default () => {
+  const [show, setShow] = useState(true);
+
+  return (
+    <>
+      <Button
+        style={{ marginBottom: 10 }}
+        type="primary"
+        onClick={() => setShow(!show)}
+      >
+        {show ? '关闭图片' : '打开图片'}
+      </Button>
+      {show && <SubComponment />}
+    </>
   );
 };

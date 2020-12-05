@@ -3,7 +3,7 @@ title: useUpdate
 group:
   title: LifeCycle
   path: /life-cycle
-  order: 3
+  order: 1
 ---
 
 # useUpdate
