@@ -103,6 +103,7 @@ const useVirtualList = <T = any>(list: T[], options: OptionType) => {
   // 计算起始位置的 offsetTop
   const offsetTop = useMemo(() => getDistanceTop(state.start), [state.start]);
 
+  // 滚动到
   const scrollTo = (index: number) => {
     if (containerRef.current) {
       containerRef.current.scrollTop = getDistanceTop(index);

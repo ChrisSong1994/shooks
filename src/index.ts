@@ -11,6 +11,7 @@ export { default as useVirtualList } from './useVirtualList';
 // State
 export { default as useQuery } from './useQuery';
 export { default as usePrevious } from './usePrevious';
+export { default as useDeepCompareEffect } from './useDeepCompareEffect';
 
 // Advanced
 export { default as usePersistFn } from './usePersistFn';
