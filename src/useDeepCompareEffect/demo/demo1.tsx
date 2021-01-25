@@ -23,7 +23,12 @@ export default () => {
       <Button type="primary" onClick={resetValue}>
         重置数据
       </Button>
-      <Button type="primary" onClick={changeValue}>
+
+      <Button
+        type="primary"
+        onClick={changeValue}
+        style={{ marginLeft: '10px' }}
+      >
         更改数据
       </Button>
     </>
